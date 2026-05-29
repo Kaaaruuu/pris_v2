@@ -15,8 +15,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PRIS - Patient Recording Information System",
-  description: "Secure, multi-tenant clinical record system for modern healthcare practices in the Philippines.",
+  title: {
+    default: "PRIS - Patient Recording Information System",
+    template: "%s | PRIS",
+  },
+  description: "Secure, multi-tenant clinical record system for modern healthcare practices in the Philippines. RA 10173 Compliant.",
+  keywords: ["EMR", "Electronic Medical Records", "Healthcare Philippines", "Data Privacy Act", "RA 10173", "Clinical Records"],
+  authors: [{ name: "Project PRIS" }],
+  creator: "Project PRIS",
+  openGraph: {
+    type: "website",
+    locale: "en_PH",
+    url: "https://pris.ph",
+    title: "PRIS - Patient Recording Information System",
+    description: "Secure, multi-tenant clinical record system for Philippine healthcare providers.",
+    siteName: "PRIS",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PRIS - Patient Recording Information System",
+    description: "Secure, multi-tenant clinical record system for Philippine healthcare providers.",
+  },
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({

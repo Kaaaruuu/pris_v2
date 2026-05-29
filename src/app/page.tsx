@@ -3,8 +3,26 @@ import { Shield, Lock, History, Globe, Zap, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PRIS",
+    "operatingSystem": "Web",
+    "applicationCategory": "HealthApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "1499.00",
+      "priceCurrency": "PHP"
+    },
+    "description": "Secure, multi-tenant clinical record system for modern healthcare practices in the Philippines. RA 10173 Compliant."
+  };
+
   return (
     <div className="flex flex-col w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-white px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
