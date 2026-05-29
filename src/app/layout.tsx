@@ -14,6 +14,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     default: "PRIS - Patient Recording Information System",
@@ -36,7 +42,6 @@ export const metadata: Metadata = {
     title: "PRIS - Patient Recording Information System",
     description: "Secure, multi-tenant clinical record system for Philippine healthcare providers.",
   },
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({
